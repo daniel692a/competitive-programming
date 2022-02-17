@@ -3,7 +3,7 @@
 using namespace std;
 
 string can_divide_even(int weight){
-	return ((weight-2)%2==0) ? "YES" : "NO"; 
+	return ((weight-2)%2==0 and weight!=2) ? "YES" : "NO"; 
 }
 
 int main(){
