@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int max_gain_days(vector<int> g){
+int max_gain_days(vector<long long int> g){
     int max_gain_days = 0, gain_days=1;
     for (int i = 1; i < g.size(); i++)
     {
@@ -15,9 +15,11 @@ int max_gain_days(vector<int> g){
             }
             gain_days = 1;
         }
-    }
-    if(max_gain_days==0){
-        max_gain_days = gain_days;
+	    if(i==(g.size()-1)){
+		    if(gain_days>max_gain_days){
+			max_gain_days = gain_days;
+		    }
+	    }
     }
     return max_gain_days;
 }
@@ -25,7 +27,7 @@ int max_gain_days(vector<int> g){
 int main(){
     int n;
     cin>>n;
-    vector<int> days(n);
+    vector<long long int> days(n);
     for(int i = 0; i<n; i++){
         cin>>days[i];
     }
