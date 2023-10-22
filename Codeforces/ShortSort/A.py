@@ -1,0 +1,1 @@
+for i in range(0, int(input())): print("NO" if input() in ["cab", "bca"] else "YES") 
