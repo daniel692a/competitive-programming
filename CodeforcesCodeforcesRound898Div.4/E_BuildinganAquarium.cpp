@@ -8,7 +8,24 @@ using namespace std;
 #define ll long long
 
 void solve(){
-
+    int t; cin>>t;
+    while(t--){
+        ll int n, x;
+        cin>>n>>x;
+        vector<ll int> coral(n);
+        ll int sumc = 0;
+        ll int r = -1;
+        for(int i=0; i<n; i++){
+            cin>>coral[i];
+            sumc += coral[i];
+            r = max(r, coral[i]);
+        }
+        ll int area = n*r;
+        int l=0;
+        while(l<=r){
+            int mid = (l+r)/2;
+        }
+    }
 }
 
 int main(){
